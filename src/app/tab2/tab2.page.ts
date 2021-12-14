@@ -63,7 +63,6 @@ export class Tab2Page {
       await this.presentToast("Nota agregada correctamente", "success");
       this.formNota.reset();
     } catch (err) {
-      console.log(err); //<---no en producción
       this.miLoading && this.miLoading.dismiss();
       await this.presentToast("Error agregando nota", "danger");
     }

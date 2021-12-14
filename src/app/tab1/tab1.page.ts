@@ -23,7 +23,7 @@ export class Tab1Page {
     private AlertCtrl: AlertController,
     private modalCtrl:ModalController) {}
 
-  async ionViewDidEnter(){
+  async ionViewWillEnter(){
     await this.cargaNotas();
   }
 
