@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-capitalize"> 
+      {{titulo}}
+    </ion-title>
+
+    <ion-buttons style="margin-right: 1%;" slot="end">
+      
+      <ion-icon class="icon-logout" slot="end" name="log-out-outline" style="zoom:1.5" (click)="logOut()"></ion-icon>
+      <ion-label class="icon-logout" (click)="logOut()" >Log Out</ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-capitalize">
+      Editando "{{note.title}}"
+    </ion-title>
+
+    <!-- <ion-buttons style="margin-right: 1%;" slot="end">
+
+      <ion-icon class="icon-logout" slot="end" name="log-out-outline" style="zoom:1.5" (click)="logOut()"></ion-icon>
+      <ion-label class="icon-logout" (click)="logOut()">Log Out</ion-label>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  
+  <form [formGroup]="formNota" (ngSubmit)="editNote()">
+    <ion-item>
+      <ion-label>Título:</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descripción:</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+    <ion-button expand="full" color="primary" shape="round"
+       type="submit" [disabled]="this.formNota.invalid" style="margin-top: 3% !important;">Editar</ion-button>
+  </form>
+
+  <ion-button (click)="close()" expand="full" color="danger" shape="round" style="margin-top: 3% !important;">
+    Cancelar
+  </ion-button>
+</ion-content>
+  
+  
+  
+  

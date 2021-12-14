@@ -1,0 +1,70 @@
+
+<div class="login-wrap">
+  
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+
+
+    
+
+    <div class="login-form">
+
+      <div class="sign-in-htm">
+        <form [formGroup]="formLogin">
+          <div class="group">
+            <label for="mail" class="label" style="margin-bottom:3% !important;">Correo Electrónico</label>
+            <input id="mail" type="text" class="input" formControlName="mail">
+          </div>
+          <div class="group">
+            <label for="pass" class="label" style="margin-bottom:3% !important;">Contraseña</label>
+            <input id="pass" type="password" class="input" data-type="pass" formControlName="pass">
+          </div>
+        </form>
+
+        <div>
+          <ion-button expand="block" shape="round" style="--background:#1161ee" (click)="loginMail()">
+            Iniciar Sesión
+          </ion-button>
+
+          <ion-button expand="block" shape="round">
+            <ion-icon slot="start" name="logo-facebook"></ion-icon>
+            Facebook
+          </ion-button>
+
+          <ion-button expand="block" shape="round" color="danger" (click)="loginGoogle()">
+            <ion-icon name="logo-google" slot="start"></ion-icon>
+            Google +
+          </ion-button>
+        </div>
+
+      </div>
+      <div class="sign-up-htm">
+        <form [formGroup]="formRegister">
+        <div class="group">
+          <label for="username" class="label">Nombre de Usuario</label>
+          <input id="username" type="text" class="input" formControlName="username">
+        </div>
+
+        <div class="group">
+          <label for="regmail" class="label">Correo Electrónico</label>
+          <input id="regmail" type="text" class="input" formControlName="regmail">
+        </div>
+
+        <div class="group">
+          <label for="regpass" class="label">Contraseña</label>
+          <input id="regpass" type="password" class="input" data-type="password" formControlName="regpass">
+        </div>
+        <div class="group">
+          <label for="repeat" class="label">Repetir Contraseña</label>
+          <input id="repeat" type="password" class="input" data-type="password" formControlName="repeat">
+        </div>
+
+        <div class="group">
+          <input type="submit" class="button" value="Registrarse" (click)="create()">
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
